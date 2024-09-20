@@ -10,7 +10,7 @@ ARG GROUP=customgroup
 
 # Install sudo
 RUN apt-get clean
-RUN apt-get update && apt-get install -y sudo curl openssh-server build-essential pciutils
+RUN apt-get update && apt-get install -y sudo curl openssh-server build-essential pciutils llvm clang git wget
 
 # Create a group and a user with your UID and GID
 RUN groupadd -g ${GID} ${GROUP} && \
